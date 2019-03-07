@@ -13,4 +13,4 @@ const FeedSummary=()=>{
 		)
 }
 
-export default ProjectSummary
+export default FeedSummary

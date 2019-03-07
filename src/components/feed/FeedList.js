@@ -5,7 +5,7 @@ const FeedList=()=>{
 	return (
 		<div className="feed-list section">
 
-		<ProjectSummary />
+		<FeedSummary />
 
 		</div>
 		)

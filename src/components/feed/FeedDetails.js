@@ -14,7 +14,7 @@ const FeedDetails=()=>{
 	<div>3 March 2019</div>
 	</div>
 	</div>
-	<div>	
+	</div>	
 
 		)
 

@@ -18,7 +18,7 @@ class App extends Component {
          <Route path='/feed/:id' component={FeedDetails} />
          <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />
-          <Route path='/addfeed' component={CreateFeed} />
+          <Route path='/addfeed' component={CreateFeed } />
 
       </Switch>
       </div>

@@ -9,6 +9,11 @@ const initState={
 
 const feedReducer=(state=initState, action)=>{
 
+	switch(action.type){
+		case 'CREATE_FEED':
+		
+
+	}
 	return state
 }
 

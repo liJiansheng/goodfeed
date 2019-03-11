@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-
+import { connect } from 'react-redux'
+import { CreateFeed } from '../../store/actions/feedActions'
 class CreateFeed extends Component {
 state={
 title:'',
@@ -13,7 +14,8 @@ this.setState({
 
 handleSubmit=(e)=>{
 e.preventDefault();
-console.log(this.state)
+this.props.createFeed(this.state)
+
 }
 render(){
 return(
@@ -36,5 +38,11 @@ return(
 
 	)
 }
+
+const mapDispatchToProps=(dispatch)=>{
+	return{
+		CreateFeed:(feed)=>dispatch(createFeed(feed))
+	}
 }
-export default CreateFeed
+}
+export default connect(null, mapDispatchToProps)(CreateFeed)

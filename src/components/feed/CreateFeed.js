@@ -44,5 +44,5 @@ const mapDispatchToProps=(dispatch)=>{
 		CreateFeed:(feed)=>dispatch(createFeed(feed))
 	}
 }
-}
+
 export default connect(null, mapDispatchToProps)(CreateFeed)

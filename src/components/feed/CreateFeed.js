@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { CreateFeed } from '../../store/actions/feedActions'
+import { createFeed } from '../../store/actions/feedActions'
 class CreateFeed extends Component {
 	state={
 		title:'',
@@ -41,7 +41,7 @@ render(){
 }
 const mapDispatchToProps=(dispatch)=>{
 	return{
-		CreateFeed:(feed)=>dispatch(createFeed(feed))
+		createFeed:(feed)=>dispatch(createFeed(feed))
 	}
 }
 

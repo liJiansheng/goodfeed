@@ -4,6 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 
 const FeedDetails=(props)=>{
+	const id=props.match.params.id
 	const { feed }= props;
 	if (feed){
 		return(

@@ -33,7 +33,7 @@ const FeedDetails=(props)=>{
 const mapStateToProps=(state,ownProps)=>{
 	const id=ownProps.props.match.params.id
 	const feeds=state.firestore.data.feeds
-	const feed=feed ? feeds[id] : null
+	const feed=feeds ? feeds[id] : null
 	return{
 
 		feed: feed

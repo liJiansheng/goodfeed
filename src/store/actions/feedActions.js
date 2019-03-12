@@ -7,7 +7,6 @@ export const createFeed=(feed)=>{
 			authorFirstName:'Lee',
 			authorLastName:'KS',
 			authorId: 12345,
-			createdAt: new Date()
 
 		}).then(()=>{
 			dispatch({type:'CREATE_FEED', feed });	

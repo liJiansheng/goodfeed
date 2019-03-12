@@ -8,8 +8,9 @@ const FeedList=({feeds})=>{
 
 		{feeds && feeds.map(feed =>{
 			return(
-				<Link to={'/feed/'+feed.id}>
+				<Link to={'/feed/'+feed.id} >
 				<FeedSummary feed={feed} key={feed.id} />
+				</Link>
 				)
 		})
 		}

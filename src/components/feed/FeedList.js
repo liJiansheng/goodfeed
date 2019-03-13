@@ -2,6 +2,7 @@ import React from 'react'
 import FeedSummary from './FeedSummary'
 import { Link } from 'react-router-dom'
 
+
 const FeedList=({feeds})=>{
 	return (
 		<div className="feed-list section">
@@ -17,5 +18,6 @@ const FeedList=({feeds})=>{
 		</div>
 		)
 }
+
 
 export default FeedList

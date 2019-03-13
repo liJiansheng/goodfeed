@@ -4,10 +4,12 @@ import FeedList from '../feed/FeedList'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import {Redirect } from 'react-router-dom'
 
 class Dashboard extends Component{
 	render(){
-		const { feeds } =this.props
+		const { feeds, auth } =this.props;
+		if(!auth.uid) return <Redirect to='/signin' />
 
 		return (
 			<div className="dashboard container">
@@ -26,7 +28,8 @@ class Dashboard extends Component{
 
 const mapStateToProps=(state)=>{
 	return{
-		feeds:state.firestore.ordered.feeds
+		feeds:state.firestore.ordered.feeds,
+		auth: state.firebase.auth
 	}
 
 }

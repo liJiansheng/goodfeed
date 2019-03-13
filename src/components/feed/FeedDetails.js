@@ -2,10 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import {Redirect } from 'react-router-dom'
 
 const FeedDetails=(props)=>{
+	const { auth } = this.props;
+	const { feed,auth }= props;
 
-	const { feed }= props;
+	if(!auth.uid) return <Redirect to='/signin' />
+		
 	if (feed){
 		return(
 			<div className="container section feed-details">
@@ -37,10 +41,12 @@ const mapStateToProps = (state,ownProps) => {
 	const feeds=state.firestore.data.feeds;
 	const feed=feeds ? feeds[id] : null;
 	return{
-		feed: feed
+		feed: feed,
+		auth: state.firebase.auth
 	}
 
 }
+
 export default compose(
 	connect(mapStateToProps),
 	firestoreConnect([

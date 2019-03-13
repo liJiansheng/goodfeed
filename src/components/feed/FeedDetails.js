@@ -5,11 +5,10 @@ import { compose } from 'redux'
 import {Redirect } from 'react-router-dom'
 
 const FeedDetails=(props)=>{
-	const { auth } = this.props;
 	const { feed,auth }= props;
 
 	if(!auth.uid) return <Redirect to='/signin' />
-		
+
 	if (feed){
 		return(
 			<div className="container section feed-details">

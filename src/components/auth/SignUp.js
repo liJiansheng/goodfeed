@@ -64,4 +64,4 @@ const mapDispatchToProps=(dispatch)=>{
 		signUp: (newUser)=>dispatch(signUp(newUser))
 	}
 }
-export default connect(mapStateToProps)(SignUp)
+export default connect(mapStateToProps,mapDispatchToProps)(SignUp)

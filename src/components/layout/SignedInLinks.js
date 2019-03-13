@@ -19,4 +19,4 @@ const mapDispatchToProps=(dispatch)=>{
 	}
 }
 
-export default SignedInLinks
+export default connect(null,mapDispatchToProps)(SignedInLinks)

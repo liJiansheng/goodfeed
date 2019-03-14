@@ -36,6 +36,6 @@ const mapStateToProps=(state)=>{
 export default compose(
 	connect(mapStateToProps),
 	firestoreConnect([
-	{ collection: 'feeds' }
+	{ collection: 'feeds', orderBy:['createdAt','desc']}
 	])
 )(Dashboard) 

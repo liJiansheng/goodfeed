@@ -17,6 +17,7 @@ handleChange= (e) =>{
 handleSubmit=(e)=>{
 	e.preventDefault();
 	this.props.createFeed(this.state)
+	this.props.history.push('/');
 
 	}
 render(){

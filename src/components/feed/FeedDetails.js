@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import {Redirect } from 'react-router-dom'
+import moment from 'moment'
 
 const FeedDetails=(props)=>{
 	const { feed,auth }= props;
@@ -19,7 +20,7 @@ const FeedDetails=(props)=>{
 			</div>
 			<div className="card-action gret lighten-4 grey-text">
 			<div>Posted by { feed.authorFirstName } { feed.authorLastName }</div>
-			<div>3 March 2019</div>
+			<div>{moment(feed.createdAt.toDate()).calendar()}</div>
 			</div>
 			</div>
 			</div>	

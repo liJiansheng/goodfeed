@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 
 const FeedSummary=({feed})=>{
 	return(
@@ -6,7 +7,7 @@ const FeedSummary=({feed})=>{
 			<div className="card-content grey-text text-darken-3">
 				<span className="card-title">{feed.title}</span>
 				<p>Posted By  {feed.authorFirstName} {feed.authorLastName}</p>
-				<p className="grey-text">01 March, 1pm</p>
+				<p className="grey-text">{moment(feed.createdAt.toDate()).calendar()}</p>
 				</div>
 				</div>
 

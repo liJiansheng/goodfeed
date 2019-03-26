@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import firebase from 'firebase/app'
 import FileUploader from 'react-firebase-file-uploader';
 import { createFeed } from '../../store/actions/feedActions'
 import { Redirect } from 'react-router-dom'

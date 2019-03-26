@@ -11,7 +11,7 @@ const Navbar = (props) =>{
 	return (
 		<nav className="nav-wrapper amber lighten-2">
 		<div className="container">
-		<Link to='/' className="brand-logo">Good Feed</Link>
+		<Link to='/' className="brand-logo logo">Good Feed</Link>
 		{ links }
 		</div>
 		</nav>

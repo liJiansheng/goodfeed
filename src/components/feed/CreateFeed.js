@@ -64,7 +64,7 @@ render(){
 				<FileUploader
 				accept="image/*"
 				name="feedImg"
-				filename={file => this.state.title + file.name.split('.')[1]; }
+				filename={file => this.state.title + file.name.split('.')[1]}
 				storageRef={firebase.storage().ref('images')}
 				onUploadStart={this.handleUploadStart}
 				onUploadError={this.handleUploadError}

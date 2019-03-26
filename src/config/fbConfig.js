@@ -8,7 +8,7 @@ import 'firebase/auth'
     authDomain: "goodfeed-ecdda.firebaseapp.com",
     databaseURL: "https://goodfeed-ecdda.firebaseio.com",
     projectId: "goodfeed-ecdda",
-    storageBucket: "",
+    storageBucket: "goodfeed-ecdda.appspot.com",
     messagingSenderId: "846159984894"
   };
   firebase.initializeApp(config);

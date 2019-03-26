@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { reduxFirestore, getFirestore } from 'redux-firestore'
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase'
+import FileUploader from 'react-firebase-file-uploader';
 import fbConfig from './config/fbConfig'
 
 

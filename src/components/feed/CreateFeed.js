@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import firebase from 'firebase/app'
+import firebase from 'firebase'
 import FileUploader from 'react-firebase-file-uploader';
 import { createFeed } from '../../store/actions/feedActions'
 import { Redirect } from 'react-router-dom'
@@ -66,7 +66,7 @@ render(){
 				accept="image/*"
 				name="feedImg"
 				filename={file => this.state.title + file.name.split('.')[1]}
-				storageRef={firebase.storage().ref('images')}
+				storageRef={firebase.storage().ref('images')}	
 				onUploadStart={this.handleUploadStart}
 				onUploadError={this.handleUploadError}
 				onUploadSuccess={this.handleUploadSuccess}

@@ -3,6 +3,7 @@ import FeedSummary from './FeedSummary'
 import { Link } from 'react-router-dom'
 
 
+
 const FeedList=({feeds})=>{
 	return (
 		<div className="feed-list section">

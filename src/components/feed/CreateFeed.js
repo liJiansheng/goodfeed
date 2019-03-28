@@ -71,6 +71,7 @@ render(){
 				onUploadError={this.handleUploadError}
 				onUploadSuccess={this.handleUploadSuccess}
 				onProgress={this.handleProgress}
+				maxWidth="800px"
 				/>
 
 				<div className="input-field">

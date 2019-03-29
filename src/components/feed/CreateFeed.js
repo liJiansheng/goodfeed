@@ -14,12 +14,15 @@ class CreateFeed extends Component {
 		progress: 0,
 		feedImgURL: ''
 	}
-
+handlebeforeUploadStart = (maxWidth) => {
+	if(maxWidth>800){
+		throw Error('File too big')
+	}
+}
 handleUploadStart = () => this.setState({isUploading: true, progress: 0});
 handleProgress = (progress) => this.setState({progress});
 handleUploadError = (error) => {
 this.setState({isUploading: false});
-console.error(error);
 }
 handleUploadSuccess = (filename) => {
 this.setState({feedImg: filename, progress: 100, isUploading: false});
@@ -65,7 +68,7 @@ render(){
 				<FileUploader
 				accept="image/*"
 				name="feedImg"
-				beforeUploadStart={file => { if (file.width > 800) throw Error('File too big') }}
+				beforeUploadStart={this.handlebeforeUploadStart}
 				filename={file => this.state.title + file.name.split('.')[1]}
 				storageRef={firebase.storage().ref('images')}	
 				onUploadStart={this.handleUploadStart}

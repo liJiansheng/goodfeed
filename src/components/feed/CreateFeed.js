@@ -65,6 +65,7 @@ render(){
 				<FileUploader
 				accept="image/*"
 				name="feedImg"
+				beforeUploadStart={file => { if (file.width > 800) throw Error('File too big') }}
 				filename={file => this.state.title + file.name.split('.')[1]}
 				storageRef={firebase.storage().ref('images')}	
 				onUploadStart={this.handleUploadStart}

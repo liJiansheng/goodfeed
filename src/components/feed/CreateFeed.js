@@ -14,11 +14,7 @@ class CreateFeed extends Component {
 		progress: 0,
 		feedImgURL: ''
 	}
-handlebeforeUploadStart = (maxWidth) => {
-	if(maxWidth>800){
-		throw Error('File too big')
-	}
-}
+
 handleUploadStart = () => this.setState({isUploading: true, progress: 0});
 handleProgress = (progress) => this.setState({progress});
 handleUploadError = (error) => {
@@ -75,7 +71,7 @@ render(){
 				onUploadError={this.handleUploadError}
 				onUploadSuccess={this.handleUploadSuccess}
 				onProgress={this.handleProgress}
-				maxWidth={700}
+				maxWidth={600}
 				/>
 
 				<div className="input-field">

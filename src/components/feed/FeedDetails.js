@@ -15,7 +15,7 @@ const FeedDetails=(props)=>{
 			<div className="container section feed-details">
 			<div className="card z-depth-0">
 			<div className="card-content">
-			<img src={ feed.feedImgURL } width="80px"></img>
+			<img src={ feed.feedImgURL } width="500px"></img>
 			<span className="card-title">{ feed.title }</span>
 			<p>{ feed.message }</p>
 			</div>

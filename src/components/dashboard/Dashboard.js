@@ -17,7 +17,7 @@ class Dashboard extends Component{
 					<div className="col s12 m6">
 					<FeedList feeds={feeds}/>
 					</div>	
-					<div className="col s8 m4 offset-m2">
+					<div className="col s4 m4 offset-m1">
 					<Notifications />
 				</div>
 			</div>	

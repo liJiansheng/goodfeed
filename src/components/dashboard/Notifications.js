@@ -6,13 +6,19 @@ const Notifications =(props)=>{
 	const { profile } = props;
 
 	return(
-		<div className="section">
-			<div className="card z-depth-0">
-			<div className="card-content">
-			<p>{profile.firstName} {profile.lastName}</p>
-			</div>
-			</div>
-			</div>
+		 <div className="section">
+    		<div className="col s12 m7">
+      		<div className="card">
+        <div className="card-image">
+          <img src="images/profile.jpg">
+        </div>
+        <div class="card-content">
+          <p><strong>{profile.firstName} {profile.lastName}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+	
 		)
 }
 

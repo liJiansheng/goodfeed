@@ -13,7 +13,7 @@ const Notifications =(props)=>{
           	<img src="img/profile.jpg" width="100px"></img>
         	</div>
         <div class="card-content">
-          <h3>{profile.firstName} {profile.lastName}</h3>
+          <h5>{profile.firstName} {profile.lastName}</h5>
         </div>
       </div>
     </div>

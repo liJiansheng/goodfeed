@@ -1,11 +1,12 @@
-## goodfeed
-
-# Tech Stack
+# Goodfeed
 
 # Overview
 
-a simple feed to integrate CI with Jenkins
+a simplified Twitter feed clone. Allows users login to post photos and text. Build with CI on Jenkins platform.
 
-# Features
+## Tech Stack
+ReactJS
+Firebase
+Jenkins
+DigitalOcean servers
 
-# Development
